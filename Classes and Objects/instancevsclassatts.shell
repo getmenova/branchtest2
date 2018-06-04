@@ -1,0 +1,54 @@
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 17:00:18) [MSC v.1900 64 bit (AMD64)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> #learning about types of atts
+>>> 
+>>> #class and instance att diff methods static and instance init method in detail about the self parameter class and instance - common to all instances
+>>> 
+>>> #in previous example - scope was global
+>>> #class attribute should contain something global
+>>> 
+>>> 
+>>> 
+>>> class Employee:
+	numberOfWorkingHours = 40
+
+	
+>>> employeeOne = Employee()
+>>> employeeTwo = Employee()
+>>> employeeOne.numberOfWorkingHours
+40
+>>> Employee.numberOfWorkingHours = 45
+>>> employeeOne.numberOfWorkingHours
+45
+>>> employeeTwo.numberOfWorkingHours
+45
+>>> employeeOne.name = "Hulk"
+>>> employeOne.name
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    employeOne.name
+NameError: name 'employeOne' is not defined
+>>> employeeOne.name
+'Hulk'
+>>> employeeTwo.name
+Traceback (most recent call last):
+  File "<pyshell#21>", line 1, in <module>
+    employeeTwo.name
+AttributeError: 'Employee' object has no attribute 'name'
+>>> employeeTwo.name = "Thor"
+>>> employeeTwo.name
+'Thor'
+>>> employeeOne.name
+'Hulk'
+>>> employeeOne.numberOfWorkingHours = 40
+>>> employeeOne.numberOfWorkingHours
+40
+>>> employeeTwo.numberOfWorkingHours
+45
+>>> #checks for instance attbt first, then class attbt
+>>> employeeOne.age
+Traceback (most recent call last):
+  File "<pyshell#29>", line 1, in <module>
+    employeeOne.age
+AttributeError: 'Employee' object has no attribute 'age'
+>>> #class and instance attbts FIN
